@@ -1,0 +1,261 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "home";
+
+section {
+  overflow: hidden;
+}
+
+.main {
+  min-height: 50vh;
+}
+
+.btn-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: transparent;
+  border: 1px solid $main-color;
+  color: $main-color;
+  cursor: pointer;
+  border-radius: 2px;
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  &:hover {
+    transition: .4s;
+    color: $light-color;
+    background: $main-color;
+  }
+}
+
+.btn-to-top-show {
+  display: block;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1368px;
+  margin: 0 auto;
+
+  @media (max-width: 1500px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0 20px;
+  }
+}
+
+.button {
+  padding: 13px 50px;
+  border-radius: 4px;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+
+  @media (max-width: 1280px) {
+    padding: 12px 30px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  &_green {
+    border: 1px solid $main-color;
+    background-color: $main-color;
+    color: $light-color;
+
+    &:hover {
+      transition: color .4s, background-color .4s;
+      background-color: transparent;
+      color: $main-color;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// Header
+.header {
+  position: sticky;
+  z-index: 99999;
+  top: 0;
+  padding: 30px 0;
+  background-color: $light-color;
+  font-family: 'Lato';
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+
+    &:hover {
+      transition: .6s;
+      transform: rotateX(360deg);
+    }
+
+    &__img {
+      width: 80px;
+    }
+  }
+
+  .menu {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: $text-alt-color;
+    }
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 60px 120px 60px 60px;
+    background-color: $light-color;
+    border-radius: 0 0 0 6px;
+    box-shadow: -2px 5px 6px rgba(165, 165, 165, 0.25);
+
+    &__signin {
+      margin-bottom: 35px;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 24px;
+      color: $dark-color;
+      text-decoration: underline;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: $text-alt-color;
+    }
+  }
+
+  .burger {
+    display: none;
+    margin-left: 20px;
+    width: 30px;
+    height: 26px;
+    background-image: url("../img/burger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &-active {
+      background-image: url("../img/close.svg");
+    }
+
+    @media (max-width: 1280px) {
+      display: block;
+    }
+  }
+
+  .proposal {
+    display: flex;
+    align-items: center;
+
+    &__signin {
+      margin-right: 35px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: $dark-color;
+
+      @media (max-width: 1280px) {
+        display: none;
+      }
+
+      &:hover {
+        transition: .4s;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+//Footer
+.footer {
+  padding: 95px 0 145px;
+  background-color: $second-color;
+  font-family: 'Lato';
+
+  .logo {
+
+    &__img {
+      width: 108px;
+    }
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      width: fit-content;
+      margin-top: 60px;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
+      color: $light-color;
+
+      &:hover {
+        transition: .4s;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+//Animation
+.link-anima {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: $main-color;
+    transition: width .4s;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}

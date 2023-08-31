@@ -1,0 +1,54 @@
+// Lato - regular 400
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato-Regular.woff") format("woff"),
+      url("../fonts/Lato-Regular.woff2") format("woff2"),
+      url("../fonts/Lato-Regular.eot") format("embedded-opentype"),
+      url("../fonts/Lato-Regular.ttf") format("truetype");
+}
+
+// Lato - medium 500
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Lato-Medium.woff") format("woff"),
+      url("../fonts/Lato-Medium.woff2") format("woff2"),
+      url("../fonts/Lato-Medium.eot") format("embedded-opentype"),
+      url("../fonts/Lato-Medium.ttf") format("truetype");
+}
+
+// Lato - semi-bold 600
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Lato-SemiBold.woff") format("woff"),
+      url("../fonts/Lato-SemiBold.woff2") format("woff2"),
+      url("../fonts/Lato-SemiBold.eot") format("embedded-opentype"),
+      url("../fonts/Lato-SemiBold.ttf") format("truetype");
+}
+
+// Georgia - regular 400
+@font-face {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Georgia.woff") format("woff"),
+      url("../fonts/Georgia.woff2") format("woff2"),
+      url("../fonts/Georgia.eot") format("embedded-opentype"),
+      url("../fonts/Georgia.ttf") format("truetype");
+}
+
+// Georgia - bold 700
+@font-face {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Georgia-Bold.woff") format("woff"),
+      url("../fonts/Georgia-Bold.woff2") format("woff2"),
+      url("../fonts/Georgia-Bold.eot") format("embedded-opentype"),
+      url("../fonts/Georgia-Bold.ttf") format("truetype");
+}
